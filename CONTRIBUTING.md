@@ -27,6 +27,5 @@ contribution to
 5. Awareness building on inviting feedback from users to help improve the project
 
 
-### Whats in it for you
 
 
