@@ -1,5 +1,9 @@
 # Introduction
 
+<p align="center"> 
+<img src="img/vidya.png">
+</p>
+
 ### Samskritha Bharati USA Flashcard project
 
 >First, A *Big* thank you for considering to contribute to this project. This is a project
