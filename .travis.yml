@@ -20,10 +20,5 @@ before_script:
     - cd build;cmake ..
     - make
     - sudo cp skt /usr/bin/.
-    - cd ..
-    - sudo mkdir -p /usr/share/textmf/fonts/type1/sanskrit
-    - sudo cp skt*pfb /usr/share/textmf/fonts/type1/sanskrit/.
-    - sudo mkdir -p /usr/share/texlive/texmf-dist/fonts/source/public/sanskrit
-    - sudo cp skt*mf /usr/share/texlive/texmf-dist/fonts/source/public/sanskrit/.
-    - cd ..
+    - cd ../..
     - ./build.sh
