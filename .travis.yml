@@ -1,0 +1,25 @@
+language: bash
+os: linux
+sudo: required
+dist: trusty
+
+addons:
+    apt:
+        packages:
+            - cmake
+            - texlive-latex-recommended
+            - texlive-fonts-extra
+            - texlive-extra-utils
+            - git
+            - pdflatex
+            - imagemagick
+
+before_script:
+    - git clone https://github.com/wilx/sanskrit.git
+    - cd sanskrit
+    - mkdir build
+    - cd build;cmake ..
+    - sudo make install
+
+install:
+    - ./build.sh
