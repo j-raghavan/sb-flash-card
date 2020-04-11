@@ -14,12 +14,17 @@ addons:
             - imagemagick
 
 before_script:
+    - pushd $(HOME)
     - git clone https://github.com/wilx/sanskrit.git
     - cd sanskrit
     - mkdir build
     - cd build;cmake ..
     - make
     - sudo cp skt /usr/bin/.
-
-install:
+    - cd ..
+    - sudo mkdir -p /usr/share/textmf/fonts/type1/sanskrit
+    - sudo cp skt*pfb /usr/share/textmf/fonts/type1/sanskrit/.
+    - sudo mkdir -p /usr/share/texlive/texmf-dist/fonts/source/public/sanskrit
+    - sudo cp skt*mf /usr/share/texlive/texmf-dist/fonts/source/public/sanskrit/.
+    - popd
     - ./build.sh
