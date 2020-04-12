@@ -7,6 +7,8 @@ name: sb-master-branch
 on:
   push:
     branches: [ master ]
+    tags:
+        - 'v*'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,7 +23,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
     - name: Get Dependency package
       run: |
         echo "Building SKT package"
@@ -40,3 +41,26 @@ jobs:
       run: |
         echo "Building Flash Cards"
         ./build.sh
+        zip --junk-paths build-artifact out run.log
+
+    - name: Creating Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: true
+          prerelease: true
+
+    - name: Upload Build Asset
+       id: upload_release_asset
+       uses: actions/upload-release-asset@v1
+       env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+           upload_url: ${{ steps.create_release.outputs.upload_url }}
+           asset_path: ./build-artifact.zip
+           asset_name: build-artifact.zip
+           asset_content_type: application/zip
