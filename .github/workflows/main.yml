@@ -25,7 +25,7 @@ jobs:
     - name: Get Dependency package
       run: |
         echo "Building SKT package"
-        git clone https://github.com/wilx/sanskritgit
+        git clone https://github.com/wilx/sanskrit.git
         cd sanskrit;mkdir build;cd build;cmake ..;make
         sudo cp skt /usr/bin
         cd ..
