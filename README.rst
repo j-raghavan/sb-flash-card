@@ -12,6 +12,11 @@ Samskrita Bharati Flash Card Project
 
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
     :target: https://opensource.org/licenses/MIT
+    
+
+
+.. image:: https://github.com/j-raghavan/sb-flash-card/workflows/sb-master-branch/badge.svg
+    :target: https://github.com/actions/upload-release-asset
 
 ---------------------------------------------------------------
 
