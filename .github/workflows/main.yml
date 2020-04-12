@@ -33,7 +33,7 @@ jobs:
       run: |
         sudo apt install texlive-full
         sudo apt install imagemagick
-        sudo grep PDF /etc/ImageMagick-6/policy.xml | grep -v "<\!--" | sed -i 's/rights="none"/rights="read\|write"/g' /etc/ImageMagic-6/policy.xml
+        sudo grep PDF /etc/ImageMagick*/policy.xml | grep -v "<\!--" | sed -i 's/rights="none"/rights="read\|write"/g' /etc/ImageMagic*/policy.xml
 
     # Runs a set of commands using the runners shell
     - name: Building Flash Cards
