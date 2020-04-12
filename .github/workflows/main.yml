@@ -28,7 +28,11 @@ jobs:
         git clone https://github.com/wilx/sanskrit.git
         cd sanskrit;mkdir build;cd build;cmake ..;make
         sudo cp skt /usr/bin
-        cd ..
+
+    - name: Get LaTeX and ImageMagic Packages
+      run: |
+        sudo apt install texlive-full
+        sudo apt install imagemagick
 
     # Runs a set of commands using the runners shell
     - name: Building Flash Cards
