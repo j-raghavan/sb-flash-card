@@ -54,8 +54,11 @@ EOF
 skt ${PWD}/out/output.skt
 pdflatex -output-directory=${PWD}/out ${PWD}/out/output.tex
 convert -density 300 ${PWD}/out/output.pdf ${PWD}/out/output.png
-mkdir -p ${PWD}/out/png/gunitha$l
-mv ${PWD}/out/output.png ${PWD}/out/png/gunitha$l/$gunitha.png
+mkdir -p ${PWD}/out/gunithakshara/png/gunitha-$l
+mkdir -p ${PWD}/out/gunithakshara/pdf/gunitha-$l
+mv ${PWD}/out/output.png ${PWD}/out/gunithakshara/png/gunitha-$l/$gunitha.png
+mv ${PWD}/out/output.pdf ${PWD}/out/gunithakshara/pdf/gunitha-$l/$gunitha.pdf
+rm ${PWD}/out/output.*
 }
 
 letters=("k" "kh" "g" "gh" "\"n" "c" "ch" "j" "jh" "~n" ".t" ".th" ".d" ".dh" ".n" "t" "th" "d" "dh" "n" "p" "ph" "b" "bh" "m" "y" "r" "l" "v" "s" "\"s" ".s" "h" "k.s")

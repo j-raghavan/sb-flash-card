@@ -41,7 +41,7 @@ jobs:
       run: |
         echo "Building Flash Cards"
         ./build.sh
-        zip --junk-paths build-artifact out run.log
+        zip -r build-artifact out run.log
 
     - name: Creating Release
       id: create_release
@@ -51,8 +51,8 @@ jobs:
       with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          draft: true
-          prerelease: true
+          draft: false
+          prerelease: false
 
     - name: Upload Build Asset
       id: upload-release-asset
