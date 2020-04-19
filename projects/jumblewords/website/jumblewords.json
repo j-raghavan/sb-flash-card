@@ -1,0 +1,43 @@
+{
+  "_comments": [
+    "This section describes how to express the words in SKT",
+    "package Syntax. SKT is the package used internally to generate",
+    "flash cards. Read this section carefully before you start",
+    "adding words. Look at the '{' and '}' below under cards",
+    "section. That is where you will add to the list of words",
+    "",
+    "To Write Ka Varga:      k    kh    g    gh   \"n",
+    "To Write Cha Varga:     c    ch    j    jh   ~n",
+    "To Write Ta Varga:      .t   .th   .d   .dh  .n",
+    "To Write tha Varga:     t    th    d    dh   n",
+    "To Write Pa Varga:      p    ph    b    bh   m",
+    "To WRite Ya Set:        y    r     l    v    s",
+    "                        \"s  .s    h    k.s",
+    "",
+    "This is how you write swaras:",
+    "         a   aa i  ii  u  uu  .r  .r.r  e  ai  o  au  a.m  a.h",
+    "",
+    "For Example if you want to write chaalaka in SKT, you would say",
+    "           caa   l    ka.h",
+    "",
+    "Please note, there is a back-slash \\ that you have use when",
+    "There is a leading \" double quotes.",
+    "--"
+  ],
+  "version": "1.0.0",
+  "cards":
+  [
+    {
+      "id":   "1",
+      "word": ["caa", "l", "ka.h"],
+      "picture": "https://j-raghavan.github.io/assets/jumblewords/car-driving.png",
+      "hint": ["One who drives."]
+    },
+    {
+      "id":   "2",
+      "word": ["caa", "l", "ka.h"],
+      "picture": "https://j-raghavan.github.io/assets/jumblewords/car-driving.png",
+      "hint": ["One who drives."]
+    }
+  ]
+}

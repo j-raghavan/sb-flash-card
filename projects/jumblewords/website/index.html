@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <title> SB USA - Fun Jumble Words </title>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 20px auto;
+  padding: 20px auto;
+  font-size: 200%;
+  text-align: center;
+  font-family: Nunito;
+}
+
+.item1 {grid-area: header; }
+.item2 {
+   grid-area: body; 
+   background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #e66465, transparent);
+   height: auto;
+   width: auto;
+}
+.item3 {
+   grid-area: footer; 
+   background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #e66465, transparent);
+}
+
+.grid-container {
+   display: grid;
+   grid-template-areas:
+     'header'
+     'body'
+     'footer';
+   grid-gap: 1px;
+   background-color: #191919;
+   padding: 10px;
+}
+
+.grid-container > div {
+   background-color: #151326;
+   text-align: center;
+   padding: 20px 0;
+   font-size: 30px;
+}
+
+.header-class {
+   width: 100%;
+   height: 60px;
+   margins: auto;
+   text-align: center;
+}
+
+html {
+  font-size: 100%;
+}
+
+.tray {
+  width: 44em;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.piece {
+  background-color: #F7EFC6;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  --shadowColor: #191919;
+  box-shadow: 
+    1px 1px 0px var(--shadowColor),
+    2px 2px 0px var(--shadowColor),
+    3px 3px 0px var(--shadowColor),
+    4px 4px 0px var(--shadowColor),
+    5px 5px 0px var(--shadowColor),
+    6px 6px 0px var(--shadowColor);
+}
+
+.piece sub {
+  position: relative;
+  bottom: 1px;
+  right: 1px;
+}
+
+.dropZone {
+  margin: 2px auto;
+  border: 2px dashed #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 10em;
+  width: 40em;
+  background-color: #FFD034;
+  align-items: center;
+}
+
+body {
+  margin: 20px auto;
+  padding: 20;
+  height: 100vh;
+
+  font-family: Nunito;
+}
+
+.responsive {
+   text-align: center;
+   margins: auto;
+}
+
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+
+</script>
+</head>
+<body translate="no">
+
+  <div class="item1 responsive">
+      <img src="https://j-raghavan.github.io/sb-flash-card/san.png" class="responsive" width="70%" align="center" alt="Jumble Fun">
+  </div>
+
+  <div class="item2">
+    <p> <b>Guess the Jumbled word! </b></p>
+    <p> <b>Drag-and-drop the letters to the box below to construct the word. </b></p>
+    <br>
+  <div class="tray" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+    <div id="1" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
+    <div class="design"> A </div>
+    </div>
+    <div id="2" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
+    <div class="design"> B </div>
+    </div>
+    <div id="3" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
+    <div class="design"> C </div>
+    </div>
+    <div id="4" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
+    <div class="design"> D </div>
+    </div>
+    <div id="5" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
+    <div class="design"> E </div>
+    </div>
+    <div id="6" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
+    <div class="design"> F </div>
+    </div>
+ </div>
+ <br>
+ <div class="dropZone" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"> </div>
+
+<div align="center" class="responsive">
+<img id="word-img" src="car-driving.png" class="responsive" width="35%" height="35%" align="center" alt="picture">
+</div>
+<p id="hint"> <b>Hint: One who drives.</b></p>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-                  ↪157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+ <script id="rendered-js">
+  function dragstartHandler(ev) {
+    ev.dataTransfer.setData("text/plain", ev.target.id);
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function dragoverHandler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function dropHandler(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/plain");
+    if (ev.target.className === 'piece') {
+        ev.target.insertAdjacentElement('afterend', document.getElementById(data));
+    } else {
+        ev.target.appendChild(document.getElementById(data));
+    }
+  }
+  var cards;
+  var Expand = function () {
+      var init = function() {
+          console.log("In Init Function");
+          fetch('jumblewords.json')
+              .then((response) => {
+              return response.json();
+          })
+          .then((data) => {
+              cards = data.cards;
+              console.log("Jumble Words version " + data.version);
+              console.log("Number of Available words " + cards.length);
+          });
+      };
+
+      return {
+          init: init };
+  }();
+
+  Expand.init();
+</script>
+ </div>
+ <div class="item3"> </div>
+</div>
+</body>
+</html>
