@@ -83,7 +83,7 @@ html {
 .piece {
   background-color: #F7EFC6;
   background-image: url("https://j-raghavan.github.io/assets/asterisk.jpg");
-  background-size: cover;
+  background-size: 110% 110%;
   width: 70px;
   height: 70px;
   text-align: center;
@@ -144,9 +144,10 @@ body {
   var currenttiles = [];
   var vargas = {};
   var swaras = {};
-  var origwords = []; 
+  var origwords = [];
 
   function initSwaras() {
+    swaras['a'] = 0;
     swaras['aa'] = 1;
     swaras['i'] = 2;
     swaras['ii'] = 3;
@@ -167,11 +168,71 @@ body {
   }
 
   function addToLookup(varga, baseindex) {
-    vargas[varga] = baseindex;
     for (var key in swaras) {
       var temp = varga + key;
+      temp = temp.toString();
       vargas[temp] = baseindex + swaras[key];
     }
+  }
+
+  function addHalfAksharas() {
+      vargas['k'] = 500;
+      vargas['kh'] = 501;
+      vargas['g'] = 502;
+      vargas['gh'] = 503;
+      vargas['"n'] = 504;
+      vargas['c'] = 505;
+      vargas['ch'] = 506;
+      vargas['j'] = 507;
+      vargas['jh'] = 508;
+      vargas['~n'] = 509;
+      vargas['.t'] = 510;
+      vargas['.th'] = 511;
+      vargas['.d'] = 512;
+      vargas['.dh'] = 513;
+      vargas['.n'] = 514;
+      vargas['t'] = 515;
+      vargas['th'] = 516;
+      vargas['d'] = 517;
+      vargas['dh'] = 518;
+      vargas['n'] = 519;
+      vargas['p'] = 520;
+      vargas['ph'] = 521;
+      vargas['b'] = 522;
+      vargas['bh'] = 523;
+      vargas['m'] = 524;
+      vargas['y'] = 525;
+      vargas['r'] = 526;
+      vargas['l'] = 527;
+      vargas['v'] = 528;
+      vargas['s'] = 529;
+      vargas['"s'] = 530;
+      vargas['.s'] = 531;
+      vargas['h'] = 532;
+      vargas['k.s'] = 533;
+  }
+
+  function addSwaras() {
+      vargas['a'] = 700;
+      vargas['aa'] = 701;
+      vargas['i'] = 702;
+      vargas['ii'] = 703;
+      vargas['u'] = 704;
+      vargas['uu'] = 705;
+      vargas['.r'] = 706;
+      vargas['.r.r'] = 707;
+      vargas['e'] = 708;
+      vargas['ai'] = 709;
+      vargas['o'] = 710;
+      vargas['au'] = 711;
+      vargas['a.m'] = 712;
+      vargas['a.h'] = 713;
+  }
+
+  function addSpecialAksharas() {
+      vargas['mra'] = 600;
+      vargas['mbuu'] = 601;
+      vargas['draa'] = 602;
   }
 
   function initLookup() {
@@ -204,16 +265,19 @@ body {
     addToLookup('r', 337);
     addToLookup('l', 267);
     addToLookup('v', 449);
-    addToLookup('s', 365);
-    addToLookup('"s', 379);
-    addToLookup('.s', 351);
+    addToLookup('s', 351);
+    addToLookup('"s', 365);
+    addToLookup('.s', 379);
     addToLookup('h', 141);
     addToLookup('k.s', 253);
+
+    addHalfAksharas();
+    addSpecialAksharas();
+    addSwaras();
   }
 
   function getImageIndex(text) {
       var index = vargas[text];
-      console.log("Index of the text is " + index);
       return index;
   }
 
@@ -222,9 +286,6 @@ body {
     console.log("Number of Available words " + cards.length);
     for (let i=0;i<cards.length;i++)
       origwords[i] = cards[i]["word"];
-
-    console.log("First Word : " + cards[0]["word"]);
-    console.log("Second Word : " + cards[1]["word"]);
   }
 
   function maketileDragabble(tileId)
@@ -254,11 +315,13 @@ body {
 
   function setTextOnTile(tileId, text)
   {
-    var temp = getImageIndex(text);
+    var s = getImageIndex(text);
+    var temp = s;
     temp = "https://j-raghavan.github.io/sb-flash-card/" + temp + ".jpeg";
     t = "url(" + temp.toString() + ")";
     t = t.toString();
     document.getElementById(tileId).style.backgroundImage = t;
+    document.getElementById(tileId).style.textAlign = "center";
   }
 
   function changeWord()
@@ -345,6 +408,7 @@ body {
              break;
       }
       document.getElementById('pic').src = card["picture"];
+      document.getElementById('hint').innerHTML = "Hint: " + card["hint"];
       for (let i=0;i < len; i++)
       {
           var idx = arr.indexOf(origwords[index][i]);
@@ -409,7 +473,7 @@ body {
 <div align="center" class="responsive">
   <img id="pic" src="" class="responsive" width="35%" height="35%" align="center" alt="picture"></img>
 </div>
-<p id="hint"> <b>Hint: One who drives.</b></p>
+<p id="hint"> <b>HINT</b></p>
 <!--
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-                  ↪157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 -->

@@ -29,15 +29,45 @@
   [
     {
       "id":   "1",
-      "word": ["caa", "~n", "\"na.h"],
+      "word": ["caa", "la", "ka.h"],
       "picture": "https://j-raghavan.github.io/assets/jumblewords/car-driving.png",
       "hint": ["One who drives."]
     },
     {
       "id":   "2",
-      "word": ["caa", "l", "ka.h"],
-      "picture": "https://j-raghavan.github.io/assets/jumblewords/car-driving.png",
-      "hint": ["One who drives."]
+      "word": ["va", ".ta.h"],
+      "picture": "https://clipartart.com/images/a-clipart-tree-5.png",
+      "hint": ["A Tree."]
+    },
+    {
+      "id":   "3",
+      "word": ["na", ".ta.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Yakshaganads.jpg",
+      "hint": [" An Indian Actor."]
+    },
+    {
+      "id":   "4",
+      "word": ["ra", "tha.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Tiruvannaikkaval4.jpg",
+      "hint": [" Chariot"]
+    },
+    {
+      "id":   "5",
+      "word": ["\"sa", "\"sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Oryctolagus_cuniculus_Rcdo.jpg",
+      "hint": [" Rabbit"]
+    },
+    {
+      "id":   "6",
+      "word": ["aa", "mra", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Mangoes_pic.jpg",
+      "hint": [" Mango"]
+    },
+    {
+      "id":   "7",
+      "word": ["naa", "ra", "\"n", "ga", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b0/OrangeBloss_wb.jpg",
+      "hint": [" An Orange Fruit"]
     }
   ]
 }
