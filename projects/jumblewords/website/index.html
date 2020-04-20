@@ -14,6 +14,14 @@
   box-sizing: border-box;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
 
 p {
   margin: 20px auto;
@@ -132,8 +140,11 @@ body {
 <script>
   var cards;
   var version;
+  var answer = [];
+  var currenttiles = [];
   var vargas = {};
   var swaras = {};
+  var origwords = []; 
 
   function initSwaras() {
     swaras['aa'] = 1;
@@ -209,6 +220,11 @@ body {
   function printInfo() {
     console.log("Version : "  + version);
     console.log("Number of Available words " + cards.length);
+    for (let i=0;i<cards.length;i++)
+      origwords[i] = cards[i]["word"];
+
+    console.log("First Word : " + cards[0]["word"]);
+    console.log("Second Word : " + cards[1]["word"]);
   }
 
   function maketileDragabble(tileId)
@@ -245,36 +261,45 @@ body {
     document.getElementById(tileId).style.backgroundImage = t;
   }
 
-  function changeWord() {
+  function changeWord()
+  {
       let index = Math.floor(Math.random() * cards.length);
       let card = cards[index];
-      let len = card["word"].length;
+      let cardWord = [];
+
+      for (let i=0;i < cards[index]["word"].length;i++)
+        cardWord[i] = cards[index]["word"][i];
+
+      let len = cardWord.length;
       maketilesNotDraggable();
       resetTextOnTiles();
       function func(a,b) {
          return 0.5 - Math.random();
       }
-      var arr = {};
+      var arr = [];
+      var firstTile = 0;
       switch(len)
       {
         case 2:
-             arr = card["word"].sort(func);
+             arr = cardWord.sort(func);
              setTextOnTile(3,arr[0]);
              setTextOnTile(4,arr[1]);
              maketileDragabble(3);
              maketileDragabble(4);
+             firstTile = 3;
              break;
         case 3:
-             arr = card["word"].sort(func);
+             arr = cardWord.sort(func);
              setTextOnTile(3,arr[0]);
              setTextOnTile(4,arr[1]);
              setTextOnTile(5,arr[2]);
              maketileDragabble(3);
              maketileDragabble(4);
              maketileDragabble(5);
+             firstTile = 3;
              break;
         case 4:
-             arr = card["word"].sort(func);
+             arr = cardWord.sort(func);
              setTextOnTile(2,arr[0]);
              setTextOnTile(3,arr[1]);
              setTextOnTile(4,arr[2]);
@@ -283,9 +308,10 @@ body {
              maketileDragabble(3);
              maketileDragabble(4);
              maketileDragabble(5);
+             firstTile = 2;
              break;
         case 5:
-             arr = card["word"].sort(func);
+             arr = cardWord.sort(func);
              setTextOnTile(2,arr[0]);
              setTextOnTile(3,arr[1]);
              setTextOnTile(4,arr[2]);
@@ -296,9 +322,10 @@ body {
              maketileDragabble(4);
              maketileDragabble(5);
              maketileDragabble(6);
+             firstTile = 2;
              break;
         case 6:
-             arr = card["word"].sort(func);
+             arr = cardWord.sort(func);
              setTextOnTile(1,arr[0]);
              setTextOnTile(2,arr[1]);
              setTextOnTile(3,arr[2]);
@@ -311,12 +338,24 @@ body {
              maketileDragabble(4);
              maketileDragabble(5);
              maketileDragabble(6);
+             firstTile = 1;
              break;
         default:
              console.log("Minimum is 2 and Max Allowed length is 6");
              break;
       }
       document.getElementById('pic').src = card["picture"];
+      for (let i=0;i < len; i++)
+      {
+          var idx = arr.indexOf(origwords[index][i]);
+          answer.push(firstTile + idx);
+      }
+  }
+
+  function welldone() {
+    console.log("Welldone");
+    document.getElementById("target").style.backgroundColor = "green";
+    setTimeout(function(){ window.location.reload(); }, 1000);
   }
 
   async function init()
@@ -368,7 +407,7 @@ body {
  <br>
  <div class="dropZone" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"> </div>
 <div align="center" class="responsive">
-<img id="pic" src="" class="responsive" width="35%" height="35%" align="center" alt="picture">
+  <img id="pic" src="" class="responsive" width="35%" height="35%" align="center" alt="picture"></img>
 </div>
 <p id="hint"> <b>Hint: One who drives.</b></p>
 <!--
@@ -391,6 +430,22 @@ body {
         ev.target.insertAdjacentElement('afterend', document.getElementById(data));
     } else {
         ev.target.appendChild(document.getElementById(data));
+    }
+
+    currenttiles.push(Number(data));
+    if (correct() === true)
+    {
+       welldone();
+    }
+  }
+
+  function correct() {
+    console.log("ANSWER is : " + JSON.stringify(answer));
+    console.log("CURRENT is : " + JSON.stringify(currenttiles));
+    if (JSON.stringify(answer) === JSON.stringify(currenttiles)) {
+       return true;
+    } else {
+       return false;
     }
   }
 </script>
