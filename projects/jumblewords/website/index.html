@@ -14,6 +14,7 @@
   box-sizing: border-box;
 }
 
+
 p {
   margin: 20px auto;
   padding: 20px auto;
@@ -73,6 +74,8 @@ html {
 
 .piece {
   background-color: #F7EFC6;
+  background-image: url("https://j-raghavan.github.io/assets/asterisk.jpg");
+  background-size: cover;
   width: 70px;
   height: 70px;
   text-align: center;
@@ -127,16 +130,215 @@ body {
   window.console = window.console || function(t) {};
 </script>
 <script>
+  var cards;
+  var version;
+  var vargas = {};
+  var swaras = {};
+
+  function initSwaras() {
+    swaras['aa'] = 1;
+    swaras['i'] = 2;
+    swaras['ii'] = 3;
+    swaras['u'] = 4;
+    swaras['uu'] = 5;
+    swaras['.r'] = 6;
+    swaras['.r.r'] = 7;
+    swaras['e'] = 8;
+    swaras['ai'] = 9;
+    swaras['o'] = 10;
+    swaras['au'] = 11;
+    swaras['a.m'] = 12;
+    swaras['a.h'] = 13;
+  }
+
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
   }
+
+  function addToLookup(varga, baseindex) {
+    vargas[varga] = baseindex;
+    for (var key in swaras) {
+      var temp = varga + key;
+      vargas[temp] = baseindex + swaras[key];
+    }
+  }
+
+  function initLookup() {
+    addToLookup('k', 197);
+    addToLookup('kh', 211);
+    addToLookup('g', 113);
+    addToLookup('gh', 127);
+    addToLookup('"n', 183);
+    addToLookup('c', 29);
+    addToLookup('ch', 43);
+    addToLookup('j', 155);
+    addToLookup('jh', 169);
+    addToLookup('~n', 225);
+    addToLookup('.t', 421);
+    addToLookup('.th', 435);
+    addToLookup('.d', 71);
+    addToLookup('.dh', 85);
+    addToLookup('.n', 239);
+    addToLookup('t', 393);
+    addToLookup('th', 407);
+    addToLookup('d', 57);
+    addToLookup('dh', 99);
+    addToLookup('n', 295);
+    addToLookup('p', 309);
+    addToLookup('ph', 323);
+    addToLookup('b', 1);
+    addToLookup('bh', 15);
+    addToLookup('m', 281);
+    addToLookup('y', 463);
+    addToLookup('r', 337);
+    addToLookup('l', 267);
+    addToLookup('v', 449);
+    addToLookup('s', 365);
+    addToLookup('"s', 379);
+    addToLookup('.s', 351);
+    addToLookup('h', 141);
+    addToLookup('k.s', 253);
+  }
+
+  function getImageIndex(text) {
+      var index = vargas[text];
+      console.log("Index of the text is " + index);
+      return index;
+  }
+
+  function printInfo() {
+    console.log("Version : "  + version);
+    console.log("Number of Available words " + cards.length);
+  }
+
+  function maketileDragabble(tileId)
+  {
+    document.getElementById(tileId).draggable = true;
+  }
+
+  function maketilesNotDraggable()
+  {
+    document.getElementById("1").draggable = false;
+    document.getElementById("2").draggable = false;
+    document.getElementById("3").draggable = false;
+    document.getElementById("4").draggable = false;
+    document.getElementById("5").draggable = false;
+    document.getElementById("6").draggable = false;
+  }
+
+  function resetTextOnTiles()
+  {
+    document.getElementById("1_img").src = "";
+    document.getElementById("2_img").src = "";
+    document.getElementById("3_img").src = "";
+    document.getElementById("4_img").src = "";
+    document.getElementById("5_img").src = "";
+    document.getElementById("6_img").src = "";
+  }
+
+  function setTextOnTile(tileId, text)
+  {
+    var temp = getImageIndex(text);
+    temp = "https://j-raghavan.github.io/sb-flash-card/" + temp + ".jpeg";
+    t = "url(" + temp.toString() + ")";
+    t = t.toString();
+    document.getElementById(tileId).style.backgroundImage = t;
+  }
+
+  function changeWord() {
+      let index = Math.floor(Math.random() * cards.length);
+      let card = cards[index];
+      let len = card["word"].length;
+      maketilesNotDraggable();
+      resetTextOnTiles();
+      function func(a,b) {
+         return 0.5 - Math.random();
+      }
+      var arr = {};
+      switch(len)
+      {
+        case 2:
+             arr = card["word"].sort(func);
+             setTextOnTile(3,arr[0]);
+             setTextOnTile(4,arr[1]);
+             maketileDragabble(3);
+             maketileDragabble(4);
+             break;
+        case 3:
+             arr = card["word"].sort(func);
+             setTextOnTile(3,arr[0]);
+             setTextOnTile(4,arr[1]);
+             setTextOnTile(5,arr[2]);
+             maketileDragabble(3);
+             maketileDragabble(4);
+             maketileDragabble(5);
+             break;
+        case 4:
+             arr = card["word"].sort(func);
+             setTextOnTile(2,arr[0]);
+             setTextOnTile(3,arr[1]);
+             setTextOnTile(4,arr[2]);
+             setTextOnTile(5,arr[3]);
+             maketileDragabble(2);
+             maketileDragabble(3);
+             maketileDragabble(4);
+             maketileDragabble(5);
+             break;
+        case 5:
+             arr = card["word"].sort(func);
+             setTextOnTile(2,arr[0]);
+             setTextOnTile(3,arr[1]);
+             setTextOnTile(4,arr[2]);
+             setTextOnTile(5,arr[3]);
+             setTextOnTile(6,arr[4]);
+             maketileDragabble(2);
+             maketileDragabble(3);
+             maketileDragabble(4);
+             maketileDragabble(5);
+             maketileDragabble(6);
+             break;
+        case 6:
+             arr = card["word"].sort(func);
+             setTextOnTile(1,arr[0]);
+             setTextOnTile(2,arr[1]);
+             setTextOnTile(3,arr[2]);
+             setTextOnTile(4,arr[3]);
+             setTextOnTile(5,arr[4]);
+             setTextOnTile(6,arr[5]);
+             maketileDragabble(1);
+             maketileDragabble(2);
+             maketileDragabble(3);
+             maketileDragabble(4);
+             maketileDragabble(5);
+             maketileDragabble(6);
+             break;
+        default:
+             console.log("Minimum is 2 and Max Allowed length is 6");
+             break;
+      }
+      document.getElementById('pic').src = card["picture"];
+  }
+
+  async function init()
+  {
+      let response = await fetch('jumblewords.json');
+      let data = await response.json();
+      version = data.version;
+      cards = data.cards;
+      printInfo();
+      changeWord();
+  }
+
+  initSwaras();
+  initLookup();
+  init();
 
 </script>
 </head>
 <body translate="no">
 
   <div class="item1 responsive">
-      <img src="https://j-raghavan.github.io/sb-flash-card/san.png" class="responsive" width="70%" align="center" alt="Jumble Fun">
+    <img src="https://j-raghavan.github.io/sb-flash-card/san.png" class="responsive" width="70%" align="center" alt="Jumble Fun"></img>
   </div>
 
   <div class="item2">
@@ -145,32 +347,33 @@ body {
     <br>
   <div class="tray" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
     <div id="1" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-    <div class="design"> A </div>
+      <img id="1_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
     </div>
     <div id="2" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-    <div class="design"> B </div>
+      <img id="2_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
     </div>
     <div id="3" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-    <div class="design"> C </div>
+      <img id="3_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
     </div>
     <div id="4" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-    <div class="design"> D </div>
+      <img id="4_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
     </div>
     <div id="5" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-    <div class="design"> E </div>
+      <img id="5_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
     </div>
     <div id="6" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-    <div class="design"> F </div>
+      <img id="6_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
     </div>
  </div>
  <br>
  <div class="dropZone" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"> </div>
-
 <div align="center" class="responsive">
-<img id="word-img" src="car-driving.png" class="responsive" width="35%" height="35%" align="center" alt="picture">
+<img id="pic" src="" class="responsive" width="35%" height="35%" align="center" alt="picture">
 </div>
 <p id="hint"> <b>Hint: One who drives.</b></p>
+<!--
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-                  ↪157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+-->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
  <script id="rendered-js">
   function dragstartHandler(ev) {
@@ -190,26 +393,6 @@ body {
         ev.target.appendChild(document.getElementById(data));
     }
   }
-  var cards;
-  var Expand = function () {
-      var init = function() {
-          console.log("In Init Function");
-          fetch('jumblewords.json')
-              .then((response) => {
-              return response.json();
-          })
-          .then((data) => {
-              cards = data.cards;
-              console.log("Jumble Words version " + data.version);
-              console.log("Number of Available words " + cards.length);
-          });
-      };
-
-      return {
-          init: init };
-  }();
-
-  Expand.init();
 </script>
  </div>
  <div class="item3"> </div>
