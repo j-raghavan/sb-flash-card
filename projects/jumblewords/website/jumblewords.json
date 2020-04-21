@@ -1,0 +1,139 @@
+{
+  "_comments": [
+    "This section describes how to express the words in SKT",
+    "package Syntax. SKT is the package used internally to generate",
+    "flash cards. Read this section carefully before you start",
+    "adding words. Look at the '{' and '}' below under cards",
+    "section. That is where you will add to the list of words",
+    "",
+    "To Write Ka Varga:      k    kh    g    gh   \"n",
+    "To Write Cha Varga:     c    ch    j    jh   ~n",
+    "To Write Ta Varga:      .t   .th   .d   .dh  .n",
+    "To Write tha Varga:     t    th    d    dh   n",
+    "To Write Pa Varga:      p    ph    b    bh   m",
+    "To WRite Ya Set:        y    r     l    v    s",
+    "                        \"s  .s    h    k.s",
+    "",
+    "This is how you write swaras:",
+    "         a   aa i  ii  u  uu  .r  .r.r  e  ai  o  au  a.m  a.h",
+    "",
+    "For Example if you want to write chaalaka in SKT, you would say",
+    "           caa   l    ka.h",
+    "",
+    "Please note, there is a back-slash \\ that you have use when",
+    "There is a leading \" double quotes.",
+    "--"
+  ],
+  "version": "1.0.0",
+  "cards":
+  [
+    {
+      "id":   "1",
+      "word": ["caa", "la", "ka.h"],
+      "picture": "https://j-raghavan.github.io/assets/jumblewords/car-driving.png",
+      "hint": ["One who drives."]
+    },
+    {
+      "id":   "2",
+      "word": ["va", ".ta.h"],
+      "picture": "https://clipartart.com/images/a-clipart-tree-5.png",
+      "hint": ["A Tree."]
+    },
+    {
+      "id":   "3",
+      "word": ["na", ".ta.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Yakshaganads.jpg",
+      "hint": [" An Indian Actor."]
+    },
+    {
+      "id":   "4",
+      "word": ["ra", "tha.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Tiruvannaikkaval4.jpg",
+      "hint": [" Chariot"]
+    },
+    {
+      "id":   "5",
+      "word": ["\"sa", "\"sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Oryctolagus_cuniculus_Rcdo.jpg",
+      "hint": [" Rabbit"]
+    },
+    {
+      "id":   "6",
+      "word": ["aa", "mra", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Mangoes_pic.jpg",
+      "hint": [" Mango"]
+    },
+    {
+      "id":   "7",
+      "word": ["naa", "ra", "\"n", "ga", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b0/OrangeBloss_wb.jpg",
+      "hint": [" An Orange Fruit"]
+    },
+    {
+      "id":   "8",
+      "word": ["daa", ".di", "ma.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Pomegranate02_edit.jpg",
+      "hint": [" Pomegranate "]
+    },
+    {
+      "id":   "9",
+      "word": ["se", "va", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Honeycrisp.jpg",
+      "hint": [" Apple "]
+    },
+    {
+      "id":   "10",
+      "word": ["naa", "ri", "ke", "la.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/3/32/Cocos_nucifera_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-187.jpg",
+      "hint": [" Coconut "]
+    },
+    {
+      "id":   "11",
+      "word": ["ka", "da", "lii"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg",
+      "hint": [" Banana "]
+    },
+    {
+      "id":   "12",
+      "word": ["draa", "k.saa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Table_grapes_on_white.jpg",
+      "hint": [" Grapes "]
+    },
+    {
+      "id":   "13",
+      "word": ["ka", "li", "\"n", "ga", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/47/Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg",
+      "hint": [" Watermelon "]
+    },
+    {
+      "id":   "14",
+      "word": ["ha", "ya.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/24/Horsescd1l-095.jpg",
+      "hint": [" Horse "]
+    },
+    {
+      "id":   "15",
+      "word": ["jha", ".sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/23/Georgia_Aquarium_-_Giant_Grouper_edit.jpg",
+      "hint": [" Fish "]
+    },
+    {
+      "id":   "16",
+      "word": ["ha", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Young_Folks%27_History_of_Rome_illus090.png",
+      "hint": [" Indian Plough "]
+    },
+    {
+      "id":   "17",
+      "word": ["va", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Biogradska_suma.jpg",
+      "hint": [" Forest "]
+    },
+    {
+      "id":   "18",
+      "word": ["ja", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Biogradska_suma.jpg",
+      "hint": [" Forest "]
+    }
+  ]
+}
