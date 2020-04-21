@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title> SB USA - Fun Jumble Words </title>
 
 <style>
@@ -24,8 +26,8 @@
 }
 
 p {
-  margin: 20px auto;
-  padding: 20px auto;
+  margin: 10px auto;
+  padding: 10px auto;
   font-size: 200%;
   text-align: center;
   font-family: Nunito;
@@ -145,6 +147,11 @@ body {
   var vargas = {};
   var swaras = {};
   var origwords = [];
+  var correctWords = 0;
+  var tempGuess = localStorage.getItem("correctGuess");
+  correctWords = (tempGuess != null) ? Number(tempGuess) : 0;
+
+
 
   function initSwaras() {
     swaras['a'] = 0;
@@ -326,6 +333,7 @@ body {
 
   function changeWord()
   {
+      document.getElementById("badge").innerHTML = correctWords;
       let index = Math.floor(Math.random() * cards.length);
       let card = cards[index];
       let cardWord = [];
@@ -417,9 +425,13 @@ body {
   }
 
   function welldone() {
-    console.log("Welldone");
     document.getElementById("target").style.backgroundColor = "green";
-    setTimeout(function(){ window.location.reload(); }, 1000);
+    setTimeout(function(){
+              window.location.reload(); 
+              }, 1000);
+    correctWords += 1;
+    localStorage.setItem("correctGuess", correctWords.toString());
+    document.getElementById("badge").innerHTML = correctWords;
   }
 
   async function init()
@@ -447,7 +459,8 @@ body {
   <div class="item2">
     <p> <b>Guess the Jumbled word! </b></p>
     <p> <b>Drag-and-drop the letters to the box below to construct the word. </b></p>
-    <br>
+    <p><span class="w3-badge w3-large w3-green" id="badge">0</span></p>
+
   <div class="tray" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
     <div id="1" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
       <img id="1_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
@@ -496,18 +509,25 @@ body {
         ev.target.appendChild(document.getElementById(data));
     }
 
+    if (currenttiles.includes(Number(data))) {
+        currenttiles.length = 0;
+    }
+
     currenttiles.push(Number(data));
-    if (correct() === true)
+
+    if (correct(ev.target.className) === true)
     {
        welldone();
     }
   }
 
-  function correct() {
-    console.log("ANSWER is : " + JSON.stringify(answer));
-    console.log("CURRENT is : " + JSON.stringify(currenttiles));
+  function correct(className) {
     if (JSON.stringify(answer) === JSON.stringify(currenttiles)) {
-       return true;
+       if (className === 'dropZone') {
+           return true;
+       } else {
+           return false;
+       }
     } else {
        return false;
     }

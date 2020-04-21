@@ -68,6 +68,72 @@
       "word": ["naa", "ra", "\"n", "ga", "m"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b0/OrangeBloss_wb.jpg",
       "hint": [" An Orange Fruit"]
+    },
+    {
+      "id":   "8",
+      "word": ["daa", ".di", "ma.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Pomegranate02_edit.jpg",
+      "hint": [" Pomegranate "]
+    },
+    {
+      "id":   "9",
+      "word": ["se", "va", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Honeycrisp.jpg",
+      "hint": [" Apple "]
+    },
+    {
+      "id":   "10",
+      "word": ["naa", "ri", "ke", "la.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/3/32/Cocos_nucifera_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-187.jpg",
+      "hint": [" Coconut "]
+    },
+    {
+      "id":   "11",
+      "word": ["ka", "da", "lii"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg",
+      "hint": [" Banana "]
+    },
+    {
+      "id":   "12",
+      "word": ["draa", "k.saa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Table_grapes_on_white.jpg",
+      "hint": [" Grapes "]
+    },
+    {
+      "id":   "13",
+      "word": ["ka", "li", "\"n", "ga", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/47/Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg",
+      "hint": [" Watermelon "]
+    },
+    {
+      "id":   "14",
+      "word": ["ha", "ya.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/24/Horsescd1l-095.jpg",
+      "hint": [" Horse "]
+    },
+    {
+      "id":   "15",
+      "word": ["jha", ".sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/23/Georgia_Aquarium_-_Giant_Grouper_edit.jpg",
+      "hint": [" Fish "]
+    },
+    {
+      "id":   "16",
+      "word": ["ha", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Young_Folks%27_History_of_Rome_illus090.png",
+      "hint": [" Indian Plough "]
+    },
+    {
+      "id":   "17",
+      "word": ["va", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Biogradska_suma.jpg",
+      "hint": [" Forest "]
+    },
+    {
+      "id":   "18",
+      "word": ["ja", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Biogradska_suma.jpg",
+      "hint": [" Forest "]
     }
   ]
 }
