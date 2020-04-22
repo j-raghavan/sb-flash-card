@@ -290,6 +290,54 @@
       "word": ["ga", ".ne", "\"sa.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6a/India_ganesha.jpg",
       "hint": [" Lord Ganesha "]
+    },
+    {
+      "id":   "45",
+      "word": ["ga", "ja.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg",
+      "hint": [" Elephant "]
+    },
+    {
+      "id":   "46",
+      "word": ["ma", "laa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c1/India_-_Chennai_-_Colours_-_Heavy_garlands_for_sale_%283058669185%29.jpg",
+      "hint": [" Garland "]
+    },
+    {
+      "id":   "47",
+      "word": ["ga", ".ta.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/48/Clay_Pots-BW-IMG_7303.jpg",
+      "hint": [" Clay Pot "]
+    },
+    {
+      "id":   "48",
+      "word": ["ba", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Mycteria_leucocephala_-_Pak_Thale.jpg",
+      "hint": [" Stork "]
+    },
+    {
+      "id":   "49",
+      "word": ["ba", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sky-3.jpg",
+      "hint": [" Stork "]
+    },
+    {
+      "id":   "50",
+      "word": ["ga", "ga", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sky-3.jpg",
+      "hint": [" Beautiful Sky "]
+    },
+    {
+      "id":   "51",
+      "word": ["ja", "na", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/91/Paternal_bonding_between_father_and_newborn_daughter.jpg",
+      "hint": [" Father "]
+    },
+    {
+      "id":   "52",
+      "word": ["ja", "na", "ni"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mother_and_Child_-_Neak_Pean_-_Angkor_-_Cambodia.JPG",
+      "hint": [" Mother "]
     }
   ]
 }
