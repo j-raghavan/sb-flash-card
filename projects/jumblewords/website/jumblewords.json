@@ -132,8 +132,86 @@
     {
       "id":   "18",
       "word": ["ja", "la", "m"],
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Biogradska_suma.jpg",
-      "hint": [" Forest "]
+      "picture": "https://www.verdict.co.uk/wp-content/uploads/2019/08/water-harvester-1440x970.jpg",
+      "hint": [" Water "]
+    },
+    {
+      "id":   "19",
+      "word": ["da", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/78/Petal-sepal.jpg",
+      "hint": [" Petal "]
+    },
+    {
+      "id":   "20",
+      "word": ["ha", "ra.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Murudeshwar_Shiva.jpg",
+      "hint": [" Shiva "]
+    },
+    {
+      "id":   "21",
+      "word": ["ka", "ra.h"],
+      "picture": "https://en.wikipedia.org/wiki/Hand#/media/File:Human-Hands-Front-Back.jpg",
+      "hint": [" Hand "]
+    },
+    {
+      "id":   "22",
+      "word": ["ka", "la", "\"sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Matka_Kalash.jpg",
+      "hint": [" Kalash "]
+    },
+    {
+      "id":   "23",
+      "word": ["ca", "ra", ".na.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/09/Gray1240.png",
+      "hint": [" Leg "]
+    },
+    {
+      "id":   "24",
+      "word": ["ra", "ja", "ka.h"],
+      "picture": "http://www.clipartsmania.com/occasions/thumb/dhobies_occupation_vector_free_cliparts.jpg",
+      "hint": [" Washerman "]
+    },
+    {
+      "id":   "25",
+      "word": ["ma", "ka", "ra.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/29/Pangil_Crocodile_Park_Davao_City.jpg",
+      "hint": [" Crocodile "]
+    },
+    {
+      "id":   "26",
+      "word": ["ca", "ma", "sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/23/Spoon_national_museum_india.JPG",
+      "hint": [" Spoon "]
+    },
+    {
+      "id":   "27",
+      "word": ["ca", "ma", "sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Jackfruit_hanging.JPG",
+      "hint": [" JackFruit "]
+    },
+    {
+      "id":   "28",
+      "word": ["bha", "va", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/06/2006-10-Hausboot-Mississippi-037_34A.jpg",
+      "hint": [" House "]
+    },
+    {
+      "id":   "29",
+      "word": ["ca", ".ta", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Passer_domesticus_male_%2815%29.jpg",
+      "hint": [" Sparrow "]
+    },
+    {
+      "id":   "30",
+      "word": ["na", "ga", "ra", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg",
+      "hint": [" City "]
+    },
+    {
+      "id":   "31",
+      "word": ["ka", "ma", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg",
+      "hint": [" Lotus "]
     }
   ]
 }
