@@ -338,6 +338,114 @@
       "word": ["ja", "na", "ni"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mother_and_Child_-_Neak_Pean_-_Angkor_-_Cambodia.JPG",
       "hint": [" Mother "]
+    },
+    {
+      "id":   "53",
+      "word": ["\"sa", "ka", ".ta.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/en/d/d5/Oxcartman-1-.gif",
+      "hint": [" Ox Cart "]
+    },
+    {
+      "id":   "54",
+      "word": ["pa", "ca", "ka.h"],
+      "picture": "https://en.wikipedia.org/wiki/Chef#/media/File:Chef_preparing_naan_to_be_baked_in_a_tandoori.jpeg",
+      "hint": [" A Chef "]
+    },
+    {
+      "id":   "55",
+      "word": ["chaa", "yaa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/3/33/Looking_down_from_The_Eiffel_Tower%2C_Paris_8_April_2007.jpg",
+      "hint": [" Shadow "]
+    },
+    {
+      "id":   "56",
+      "word": ["baa", ".na.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Two_arrows.jpg",
+      "hint": [" Arrow "]
+    },
+    {
+      "id":   "57",
+      "word": ["taa", "la.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/60/Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg",
+      "hint": [" Lock "]
+    },
+    {
+      "id":   "58",
+      "word": ["baa", "la", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/96/African_boy_transporting_fodder_by_bicycle_edit.jpg",
+      "hint": [" Boy "]
+    },
+    {
+      "id":   "59",
+      "word": ["kaa", "ga", "da", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Coloured%2C_textured_craft_card.jpg",
+      "hint": [" Paper "]
+    },
+    {
+      "id":   "60",
+      "word": ["bhaa", "ra", "ta", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Indian_cultural_zone.svg",
+      "hint": [" India "]
+    },
+    {
+      "id":   "61",
+      "word": ["paa", "ka", "\"saa", "laa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Medieval_kitchen.jpg",
+      "hint": [" Kitchen "]
+    },
+    {
+      "id":   "62",
+      "word": ["kaa", "la.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/45/MontreGousset001.jpg",
+      "hint": [" Time "]
+    },
+    {
+      "id":   "63",
+      "word": ["maa", "sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Month_-_Knuckles_%28en%29.svg",
+      "hint": [" Month "]
+    },
+    {
+      "id":   "64",
+      "word": ["\"saa", "khaa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/cf/White_Branches.jpg",
+      "hint": [" Tree Branch "]
+    },
+    {
+      "id":   "65",
+      "word": ["vi", "maa", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg",
+      "hint": [" Air Plane "]
+    },
+    {
+      "id":   "66",
+      "word": ["ci", "bu", "ka", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/48/Cleft-Chin.jpg",
+      "hint": [" Chin "]
+    },
+    {
+      "id":   "67",
+      "word": ["gi", "ri", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Monasterio_Khor_Virap%2C_Armenia%2C_2016-10-01%2C_DD_25.jpg",
+      "hint": [" Mountain "]
+    },
+    {
+      "id":   "68",
+      "word": ["pi", "paa", "saa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e0/William-Adolphe_Bouguereau_%281825-1905%29_-_Thirst_%281886%29.jpg",
+      "hint": [" Thirsty "]
+    },
+    {
+      "id":   "69",
+      "word": ["ni", "dhi"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Tesoro_de_Villena.jpg",
+      "hint": [" Wealth / Treasure "]
+    },
+    {
+      "id":   "70",
+      "word": ["ni", "\"saa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c4/View_across_the_bay_of_Naples_at_night.jpg",
+      "hint": [" Night "]
     }
   ]
 }
