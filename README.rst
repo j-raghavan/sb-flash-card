@@ -46,7 +46,7 @@ or POSIX compliant platform.
 
 *Generating Flash Cards*
 
-The sb-flash-project uses various opensource tools to generate
+The sb-flash-card uses various opensource tools to generate
 the Flash cards. The LaTeX package *skt* is Amazing and feature
 rich to produce Fine Typeset fonts in sanskrit. You will find 
 a PDF document from *skt* package that talks about the various
