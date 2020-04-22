@@ -150,8 +150,8 @@ body {
   var correctWords = 0;
   var tempGuess = localStorage.getItem("correctGuess");
   correctWords = (tempGuess != null) ? Number(tempGuess) : 0;
-
-
+  var tempShown = localStorage.getItem("alreadyShown");
+  var alreadyShown = (tempShown != null) ? JSON.parse(tempShown) : [];
 
   function initSwaras() {
     swaras['a'] = 0;
@@ -334,7 +334,19 @@ body {
   function changeWord()
   {
       document.getElementById("badge").innerHTML = correctWords;
-      let index = Math.floor(Math.random() * cards.length);
+      if (alreadyShown.length === cards.length) {
+          alreadyShown.length = 0;
+      }
+      let index = -1;
+      for (;;)
+      {
+          index = Math.floor(Math.random() * cards.length);
+          if (alreadyShown.indexOf(index) == -1) {
+            alreadyShown.push(index);
+            break;
+          }
+      }
+
       let card = cards[index];
       let cardWord = [];
 
@@ -431,6 +443,7 @@ body {
               }, 1000);
     correctWords += 1;
     localStorage.setItem("correctGuess", correctWords.toString());
+    localStorage.setItem("alreadyShown", JSON.stringify(alreadyShown));
     document.getElementById("badge").innerHTML = correctWords;
   }
 

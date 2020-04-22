@@ -212,6 +212,84 @@
       "word": ["ka", "ma", "la", "m"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg",
       "hint": [" Lotus "]
+    },
+    {
+      "id":   "32",
+      "word": ["ta", "na", "ya.h"],
+      "picture": "https://j-raghavan.github.io/sb-flash-cards/son.png",
+      "hint": [" Son "]
+    },
+    {
+      "id":   "33",
+      "word": ["aa", "la", "ya.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Srirangam_1909.jpg",
+      "hint": [" Temple "]
+    },
+    {
+      "id":   "34",
+      "word": ["aa", "pa", ".na.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/94/Taliparamba_grocery.jpg",
+      "hint": [" Small Indian Grocery Shop "]
+    },
+    {
+      "id":   "35",
+      "word": ["sa", "da", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/5/53/Ishtar_gate_in_Pergamon_museum_in_Berlin..jpg",
+      "hint": [" Building "]
+    },
+    {
+      "id":   "36",
+      "word": ["na", "ya", "na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Human_eye_with_blood_vessels.jpg",
+      "hint": [" Human Eyes "]
+    },
+    {
+      "id":   "37",
+      "word": ["a", "la", "sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a9/British_club_scene.jpg",
+      "hint": [" Lazy "]
+    },
+    {
+      "id":   "38",
+      "word": ["a", "dha", "ra.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/99/Mouth.jpg",
+      "hint": [" Lip "]
+    },
+    {
+      "id":   "39",
+      "word": ["ma", "\"sa", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Aedes_aegypti.jpg",
+      "hint": [" Mosquito "]
+    },
+    {
+      "id":   "40",
+      "word": ["aa", "ta", "pa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/da/171879main_LimbFlareJan12_lg.jpg",
+      "hint": [" Heat "]
+    },
+    {
+      "id":   "41",
+      "word": ["la", "va", ".na", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/07/Comparison_of_Table_Salt_with_Kitchen_Salt.png",
+      "hint": [" Salt "]
+    },
+    {
+      "id":   "42",
+      "word": ["cha", ".ta"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/09/Linkopings_stadsbibliotek_roof2.jpg",
+      "hint": [" Roof "]
+    },
+    {
+      "id":   "43",
+      "word": ["pha", "la", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Culinary_fruits_front_view.jpg",
+      "hint": [" Fruit "]
+    },
+    {
+      "id":   "44",
+      "word": ["ga", ".ne", "\"sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6a/India_ganesha.jpg",
+      "hint": [" Lord Ganesha "]
     }
   ]
 }
