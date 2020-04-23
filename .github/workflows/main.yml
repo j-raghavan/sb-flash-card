@@ -64,17 +64,3 @@ jobs:
           asset_path: ./build-artifact.zip
           asset_name: build-artifact.zip
           asset_content_type: application/zip
-
-    - name: Update Jumble Word Json file
-      id: upload_jumble_json
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-          echo "Uploading Jumble Word JSON Data file"
-          git clone https://github.com/j-raghavan/j-raghavan.github.io.git
-          cp projects/jumblewords/website/jumblewords.json j-raghavan.github.io/sb-jumble-words/.
-          git config user.email "mr.jayasimha@gmail.com"
-          git config user.name "J-Raghavan"
-          git add j-raghavan.github.io/sb-jumble-words/jumblewords.json
-          git commit -m "Updating Jumblewords Json - ${{ github.ref }}"
-          git push origin HEAD:master
