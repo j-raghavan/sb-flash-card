@@ -446,6 +446,186 @@
       "word": ["ni", "\"saa"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/c/c4/View_across_the_bay_of_Naples_at_night.jpg",
       "hint": [" Night "]
+    },
+    {
+      "id":   "71",
+      "word": ["\"si", "laa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/72/DirkvdM_rocks.jpg",
+      "hint": [" Rock "]
+    },
+    {
+      "id":   "72",
+      "word": ["ra", "vi"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+      "hint": [" Sun "]
+    },
+    {
+      "id":   "73",
+      "word": ["ra", "vi"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Veena.png",
+      "hint": [" Veena "]
+    },
+    {
+      "id":   "74",
+      "word": ["dhii", "va", "r"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Fisherman_and_his_catch_Seychelles.jpg",
+      "hint": [" Fisherman "]
+    },
+    {
+      "id":   "75",
+      "word": ["bii", "ja", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Avocado_seed_diagram-en.svg",
+      "hint": [" Seed "]
+    },
+    {
+      "id":   "76",
+      "word": ["nii", "la.h"],
+      "picture": "https://en.wikipedia.org/wiki/Blue#/media/File:Copper_sulfate.jpg",
+      "hint": [" Blue Color "]
+    },
+    {
+      "id":   "77",
+      "word": ["nii", "la.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/69/Ochre_quarry%2C_Roussillon%2C_France_%28465185258%29.jpg",
+      "hint": [" Yellow Color "]
+    },
+    {
+      "id":   "78",
+      "word": ["ti", "la", "ka", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/6/61/A_Hindu_wedding_ritual_in_progress_b.jpg",
+      "hint": [" Tilaka / mark worn usually on the forehead "]
+    },
+    {
+      "id":   "79",
+      "word": ["gu", "r.u"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/db/Classroom_at_a_seconday_school_in_Pendembu_Sierra_Leone.jpg",
+      "hint": [" Teacher / Guru "]
+    },
+    {
+      "id":   "80",
+      "word": ["t.u", "laa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/1/17/Balance_%C3%A0_tabac_1850.JPG",
+      "hint": [" Balance "]
+    },
+    {
+      "id":   "81",
+      "word": ["mu", "kha", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/98/Sobo_1909_260.png",
+      "hint": [" Face "]
+    },
+    {
+      "id":   "82",
+      "word": ["t.u", "la", "si"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ocimum_tenuiflorum2.jpg",
+      "hint": [" Tulasi "]
+    },
+    {
+      "id":   "83",
+      "word": ["ch.u", "ri", "kaa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/3/33/Damascus_Bowie.jpg",
+      "hint": [" Knife "]
+    },
+    {
+      "id":   "84",
+      "word": ["k.u.u", "pa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/73/Model_well%2C_burial_find%2C_China%2C_Han_dynasty%2C_206_BC_to_220_AD%2C_earthenware_-_%C3%96stasiatiska_museet%2C_Stockholm_-_DSC09578.JPG",
+      "hint": [" Well "]
+    },
+    {
+      "id":   "85",
+      "word": ["dh.u.u", "ma.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ognisko_ubt_0126.jpeg",
+      "hint": [" Smoke "]
+    },
+    {
+      "id":   "86",
+      "word": ["s.u", "cii"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Syende_fiskerpige.jpeg",
+      "hint": [" Sewing Needle "]
+    },
+    {
+      "id":   "87",
+      "word": ["n.u.u", "p.u", "ra", "m"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Ghungroo.jpg",
+      "hint": [" Musical Anklet tied to the feed by Indian Dancers "]
+    },
+    {
+      "id":   "88",
+      "word": ["m.u.u", ".sa", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/01/Rattus_norvegicus_1.jpg",
+      "hint": [" Rat / Mouse "]
+    },
+    {
+      "id":   "89",
+      "word": ["s.u.u", "ka", "ra.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sow_with_piglet.jpg",
+      "hint": [" Pig "]
+    },
+    {
+      "id":   "90",
+      "word": ["bh.u.u", "mi"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
+      "hint": [" Mother Earth "]
+    },
+    {
+      "id":   "91",
+      "word": ["p.u.u", "jaa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Madurai_Meenakshi_temple_prayer.jpg",
+      "hint": [" Pooja "]
+    },
+    {
+      "id":   "92",
+      "word": ["k.u.u", "pii"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Botella_de_pl%C3%A1stico_-_PET.jpg",
+      "hint": [" Bottle "]
+    },
+    {
+      "id":   "93",
+      "word": ["me", ".sa.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg",
+      "hint": [" Goat "]
+    },
+    {
+      "id":   "94",
+      "word": ["le", "kha", "ka.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Francisco_de_Goya_y_Lucientes_-_Gaspar_Melchor_de_Jovellanos.jpg",
+      "hint": [" Writer "]
+    },
+    {
+      "id":   "95",
+      "word": ["dhe", "n.u"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d4/CH_cow_2_cropped.jpg",
+      "hint": [" Cow "]
+    },
+    {
+      "id":   "96",
+      "word": ["se", "t.u"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Firth_unsplash_2.jpg",
+      "hint": [" Bridge "]
+    },
+    {
+      "id":   "97",
+      "word": ["ve", ".n.u"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/02/Bansuri_bamboo_flute_23inch.jpg",
+      "hint": [" Indian Flute "]
+    },
+    {
+      "id":   "98",
+      "word": ["ve", ".n.u"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/0/02/Bansuri_bamboo_flute_23inch.jpg",
+      "hint": [" Indian Flute "]
+    },
+    {
+      "id":   "99",
+      "word": ["le", "kha", "nii"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Carandache_Ecridor.jpg",
+      "hint": [" Pen "]
+    },
+    {
+      "id":   "100",
+      "word": ["me", "gha.h"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cumulus_clouds_panorama.jpg",
+      "hint": [" Clouds "]
     }
   ]
 }

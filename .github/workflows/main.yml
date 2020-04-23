@@ -77,4 +77,4 @@ jobs:
           git config user.name "J-Raghavan"
           git add j-raghavan.github.io/sb-jumble-words/jumblewords.json
           git commit -m "Updating Jumblewords Json - ${{ github.ref }}"
-          git push
+          git push origin HEAD:master
