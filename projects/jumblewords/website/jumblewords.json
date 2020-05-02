@@ -18,7 +18,7 @@
     "         a   aa i  ii  u  uu  .r  .r.r  e  ai  o  au  a.m  a.h",
     "",
     "For Example if you want to write chaalaka in SKT, you would say",
-    "           caa   l    ka.h",
+    "           caa   la    ka.h",
     "",
     "Please note, there is a back-slash \\ that you have use when",
     "There is a leading \" double quotes.",
@@ -347,7 +347,7 @@
     },
     {
       "id":   "54",
-      "word": ["pa", "ca", "ka.h"],
+      "word": ["paa", "ca", "ka.h"],
       "picture": "https://en.wikipedia.org/wiki/Chef#/media/File:Chef_preparing_naan_to_be_baked_in_a_tandoori.jpeg",
       "hint": [" A Chef "]
     },
@@ -461,13 +461,13 @@
     },
     {
       "id":   "73",
-      "word": ["ra", "vi"],
+      "word": ["vii", ".na"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/3/35/Veena.png",
       "hint": [" Veena "]
     },
     {
       "id":   "74",
-      "word": ["dhii", "va", "r"],
+      "word": ["dhii", "va", "ra.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Fisherman_and_his_catch_Seychelles.jpg",
       "hint": [" Fisherman "]
     },
@@ -497,13 +497,13 @@
     },
     {
       "id":   "79",
-      "word": ["gu", "r.u"],
+      "word": ["gu", "ru"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/d/db/Classroom_at_a_seconday_school_in_Pendembu_Sierra_Leone.jpg",
       "hint": [" Teacher / Guru "]
     },
     {
       "id":   "80",
-      "word": ["t.u", "laa"],
+      "word": ["tu", "laa"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/1/17/Balance_%C3%A0_tabac_1850.JPG",
       "hint": [" Balance "]
     },
@@ -515,67 +515,67 @@
     },
     {
       "id":   "82",
-      "word": ["t.u", "la", "si"],
+      "word": ["tu", "la", "si"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Ocimum_tenuiflorum2.jpg",
       "hint": [" Tulasi "]
     },
     {
       "id":   "83",
-      "word": ["ch.u", "ri", "kaa"],
+      "word": ["chu", "ri", "kaa"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/3/33/Damascus_Bowie.jpg",
       "hint": [" Knife "]
     },
     {
       "id":   "84",
-      "word": ["k.u.u", "pa.h"],
+      "word": ["kuu", "pa.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/7/73/Model_well%2C_burial_find%2C_China%2C_Han_dynasty%2C_206_BC_to_220_AD%2C_earthenware_-_%C3%96stasiatiska_museet%2C_Stockholm_-_DSC09578.JPG",
       "hint": [" Well "]
     },
     {
       "id":   "85",
-      "word": ["dh.u.u", "ma.h"],
+      "word": ["dhuu", "ma.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ognisko_ubt_0126.jpeg",
       "hint": [" Smoke "]
     },
     {
       "id":   "86",
-      "word": ["s.u", "cii"],
+      "word": ["su", "cii"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Syende_fiskerpige.jpeg",
       "hint": [" Sewing Needle "]
     },
     {
       "id":   "87",
-      "word": ["n.u.u", "p.u", "ra", "m"],
+      "word": ["nuu", "pu", "ra", "m"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Ghungroo.jpg",
       "hint": [" Musical Anklet tied to the feed by Indian Dancers "]
     },
     {
       "id":   "88",
-      "word": ["m.u.u", ".sa", "ka.h"],
+      "word": ["muu", ".sa", "ka.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/0/01/Rattus_norvegicus_1.jpg",
       "hint": [" Rat / Mouse "]
     },
     {
       "id":   "89",
-      "word": ["s.u.u", "ka", "ra.h"],
+      "word": ["suu", "ka", "ra.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sow_with_piglet.jpg",
       "hint": [" Pig "]
     },
     {
       "id":   "90",
-      "word": ["bh.u.u", "mi"],
+      "word": ["bhuu", "mi"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
       "hint": [" Mother Earth "]
     },
     {
       "id":   "91",
-      "word": ["p.u.u", "jaa"],
+      "word": ["puu", "jaa"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Madurai_Meenakshi_temple_prayer.jpg",
       "hint": [" Pooja "]
     },
     {
       "id":   "92",
-      "word": ["k.u.u", "pii"],
+      "word": ["kuu", "pii"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Botella_de_pl%C3%A1stico_-_PET.jpg",
       "hint": [" Bottle "]
     },
@@ -593,25 +593,25 @@
     },
     {
       "id":   "95",
-      "word": ["dhe", "n.u"],
+      "word": ["dhe", "nu"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d4/CH_cow_2_cropped.jpg",
       "hint": [" Cow "]
     },
     {
       "id":   "96",
-      "word": ["se", "t.u"],
+      "word": ["se", "tu"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Firth_unsplash_2.jpg",
       "hint": [" Bridge "]
     },
     {
       "id":   "97",
-      "word": ["ve", ".n.u"],
+      "word": ["ve", ".nu"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/0/02/Bansuri_bamboo_flute_23inch.jpg",
       "hint": [" Indian Flute "]
     },
     {
       "id":   "98",
-      "word": ["ve", ".n.u"],
+      "word": ["ve", ".nu"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/0/02/Bansuri_bamboo_flute_23inch.jpg",
       "hint": [" Indian Flute "]
     },
@@ -626,6 +626,12 @@
       "word": ["me", "gha.h"],
       "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cumulus_clouds_panorama.jpg",
       "hint": [" Clouds "]
+    },
+    {
+      "id":   "101",
+      "word": ["nau", "kaa"],
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/MSC_Poesia_Vision_of_the_Seas_%26_Mein_Schiff_2_in_Tallinn_13_June_2012.JPG",
+      "hint": [" Ship "]
     }
   ]
 }

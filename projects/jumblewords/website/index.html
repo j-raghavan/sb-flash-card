@@ -1,143 +1,339 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title> SB USA - Fun Jumble Words </title>
-
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>SB USA - Fun Jumble Word</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-@import url(https://fonts.googleapis.com/css?family=Nunito);
-
-*, *:before, *:after {
+* {
   box-sizing: border-box;
 }
 
-.popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-p {
-  margin: 10px auto;
-  padding: 10px auto;
-  font-size: 200%;
-  text-align: center;
-  font-family: Nunito;
-}
-
-.item1 {grid-area: header; }
-.item2 {
-   grid-area: body; 
-   background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #e66465, transparent);
-   height: auto;
-   width: auto;
-}
-.item3 {
-   grid-area: footer; 
-   background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #e66465, transparent);
-}
-
-.grid-container {
-   display: grid;
-   grid-template-areas:
-     'header'
-     'body'
-     'footer';
-   grid-gap: 1px;
-   background-color: #191919;
-   padding: 10px;
-}
-
-.grid-container > div {
-   background-color: #151326;
-   text-align: center;
-   padding: 20px 0;
-   font-size: 30px;
-}
-
-.header-class {
-   width: 100%;
-   height: 60px;
-   margins: auto;
-   text-align: center;
-}
-
-html {
-  font-size: 100%;
-}
-
-.tray {
-  width: 44em;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.piece {
-  background-color: #F7EFC6;
-  background-image: url("https://j-raghavan.github.io/assets/asterisk.jpg");
-  background-size: 110% 110%;
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  line-height: 70px;
-  border-radius: 10px;
-  font-size: 2em;
-  cursor: pointer;
-  --shadowColor: #191919;
-  box-shadow: 
-    1px 1px 0px var(--shadowColor),
-    2px 2px 0px var(--shadowColor),
-    3px 3px 0px var(--shadowColor),
-    4px 4px 0px var(--shadowColor),
-    5px 5px 0px var(--shadowColor),
-    6px 6px 0px var(--shadowColor);
-}
-
-.piece sub {
-  position: relative;
-  bottom: 1px;
-  right: 1px;
-}
-
-.dropZone {
-  margin: 2px auto;
-  border: 2px dashed #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 10em;
-  width: 40em;
-  background-color: #FFD034;
-  align-items: center;
-}
-
 body {
-  margin: 20px auto;
-  padding: 20;
-  height: 100vh;
+  background: #33363D;
+  color: white;
+  font-family: 'Lato';
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
-  font-family: Nunito;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drag-container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.drag-list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 690px) {
+  .drag-list {
+    display: block;
+  }
+}
+
+.drag-column {
+  -webkit-box-flex: 1;
+          flex: 1;
+  margin: 0 10px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+@media (max-width: 690px) {
+  .drag-column {
+    margin-bottom: 30px;
+  }
+}
+.drag-column h2 {
+  font-size: 0.8rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.drag-column-on-hold .drag-column-header,
+.drag-column-on-hold .is-moved,
+.drag-column-on-hold .drag-options {
+  background: #FB7D44;
+}
+.drag-column-in-progress .drag-column-header,
+.drag-column-in-progress .is-moved,
+.drag-column-in-progress .drag-options {
+  background: #2A92BF;
+}
+.drag-column-needs-review .drag-column-header,
+.drag-column-needs-review .is-moved,
+.drag-column-needs-review .drag-options {
+  background: #F4CE46;
+}
+.drag-column-approved .drag-column-header,
+.drag-column-approved .is-moved,
+.drag-column-approved .drag-options {
+  background: #00B961;
+}
+
+.drag-column-header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+.drag-inner-list {
+  min-height: 50px;
+}
+
+.drag-item {
+  margin: 10px;
+  height: 80px;
+  text-align: center;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.drag-item.is-moving {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.drag-item.img {
+    top: 50%;
+}
+
+.drag-header-more {
+  cursor: pointer;
+}
+
+.drag-options {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.drag-options.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+.drag-options-label {
+  display: block;
+  margin: 0 0 5px 0;
+}
+.drag-options-label input {
+  opacity: 0.6;
+}
+.drag-options-label span {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+/* Dragula CSS  */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  list-style-type: none;
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: 0.2;
+}
+
+/* Demo info */
+.section {
+  padding: 20px;
+  text-align: center;
+}
+.section a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+.section h4 {
+  font-weight: 400;
+}
+.section h4 a {
+  font-weight: 600;
 }
 
 .responsive {
-   text-align: center;
-   margins: auto;
+  text-align: center;
+  margins: auto;
 }
 
 </style>
 <script>
   window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<section class="section">
+<img src="https://j-raghavan.github.io/sb-flash-card/san.png" class="responsive" width="70%" align="center" alt="Jumble Fun"></img>
+<br>
+<h2>Arrange the Jumble words shown in the picture</h2>
+ <img id="pic" src="https://j-raghavan.github.io/assets/jumblewords/car-driving.png" class="responsive" width="200px" height="200px" align="center"></img>
+ <p id="hint"> Hint: One who drives </p>
+ <p><span class="w3-badge w3-large w3-green" id="badge">0</span></p>
+</section>
+
+<div class="drag-container">
+  <ul class="drag-list">
+    <li class="drag-column drag-column-on-hold">
+      <span class="drag-column-header">
+        <h2>Aksharas</h2>
+      </span>
+      <div class="drag-options" id="options1"></div>
+      <ul class="drag-inner-list" id="1">
+        <li class="drag-item" id="101">
+          <img id="1_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="20%" height="90%"></img> 
+        </li>
+        <li class="drag-item" id="102">
+        <img id="2_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="20%" height="90%"></img> 
+        </li>
+        <li class="drag-item" id="103">
+        <img id="3_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="20%" height="90%"></img> 
+        </li>
+        <li class="drag-item" id="104">
+        <img id="4_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="20%" height="90%"></img> 
+        </li>
+        <li class="drag-item" id="105">
+        <img id="5_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="20%" height="90%"></img> 
+        </li>
+        <li class="drag-item" id="106">
+        <img id="6_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="20%" height="90%"></img> 
+        </li>
+      </ul>
+    </li>
+
+    <li class="drag-column drag-column-in-progress">
+      <span class="drag-column-header">
+        <h2>Drop it here</h2>
+      </span>
+      <div class="drag-options" id="options2"></div>
+      <ul class="drag-inner-list" id="2">
+      </ul>
+     </li>
+  </ul>
+</div>
+<script src="codepen.js"></script>
+<script src='dragula.min.js'></script>
+<script id="rendered-js">
+dragula([
+document.getElementById('1'),
+document.getElementById('2'),
+//document.getElementById('3'),
+//document.getElementById('4'),
+document.getElementById('5')]).
+
+
+on('drag', function (el) {
+  // add 'is-moving' class to element being dragged
+  el.classList.add('is-moving');
+  console.log("Current tile is : " + el.id);
+}).
+on('dragend', function (el) {
+  // remove 'is-moving' class from element after dragging has stopped
+  el.classList.remove('is-moving');
+
+  // add the 'is-moved' class for 600ms then remove it
+  window.setTimeout(function () {
+    el.classList.add('is-moved');
+    window.setTimeout(function () {
+      el.classList.remove('is-moved');
+    }, 600);
+  }, 100);
+}).
+on('drop', function(el, target, source, sibling) {
+    var s = document.getElementById("2").children;
+    if (target === document.getElementById('2')) {
+        if (s.length == 0) {
+            currenttiles.push(Number(el.id));
+            return;
+        } else {
+            currenttiles.length = 0;
+            for (let i=0;i<s.length;i++)
+                currenttiles.push(Number(s[i].id));
+        }
+    }
+
+    if (correct('2') === true) {
+        welldone();
+    }
+});
+
+
+var showOptions = function () {
+
+  // the 3 dot icon
+  //var more = document.querySelectorAll('.drag-header-more');
+
+  function show() {
+    // show 'drag-options' div when the more icon is clicked
+    var target = this.getAttribute('data-target');
+    var options = document.getElementById(target);
+    options.classList.toggle('active');
+  }
+
+
+  function init() {
+    window.CP.exitedLoop(1);
+  }
+
+  return {
+    init: init };
+
+}();
+
+showOptions.init();
+//# sourceURL=pen.js
 </script>
 <script>
   var cards;
@@ -297,17 +493,19 @@ body {
 
   function maketileDragabble(tileId)
   {
-    document.getElementById(tileId).draggable = true;
+    //document.getElementById(tileId).draggable = true;
   }
 
   function maketilesNotDraggable()
   {
+    /*
     document.getElementById("1").draggable = false;
     document.getElementById("2").draggable = false;
     document.getElementById("3").draggable = false;
     document.getElementById("4").draggable = false;
     document.getElementById("5").draggable = false;
     document.getElementById("6").draggable = false;
+    */
   }
 
   function resetTextOnTiles()
@@ -325,10 +523,14 @@ body {
     var s = getImageIndex(text);
     var temp = s;
     temp = "https://j-raghavan.github.io/sb-flash-card/" + temp + ".jpeg";
-    t = "url(" + temp.toString() + ")";
-    t = t.toString();
-    document.getElementById(tileId).style.backgroundImage = t;
-    document.getElementById(tileId).style.textAlign = "center";
+    var k = tileId + "_img";
+    document.getElementById(k).src = temp;
+  }
+
+  function hideTiles(tiles)
+  {
+      for (let i=0;i<tiles.length; i++)
+          document.getElementById(tiles[i]).style.display = "none";
   }
 
   function changeWord()
@@ -354,7 +556,6 @@ body {
         cardWord[i] = cards[index]["word"][i];
 
       let len = cardWord.length;
-      maketilesNotDraggable();
       resetTextOnTiles();
       function func(a,b) {
          return 0.5 - Math.random();
@@ -367,19 +568,16 @@ body {
              arr = cardWord.sort(func);
              setTextOnTile(3,arr[0]);
              setTextOnTile(4,arr[1]);
-             maketileDragabble(3);
-             maketileDragabble(4);
-             firstTile = 3;
+             hideTiles([101,102,105,106]);
+             firstTile = 103;
              break;
         case 3:
              arr = cardWord.sort(func);
              setTextOnTile(3,arr[0]);
              setTextOnTile(4,arr[1]);
              setTextOnTile(5,arr[2]);
-             maketileDragabble(3);
-             maketileDragabble(4);
-             maketileDragabble(5);
-             firstTile = 3;
+             hideTiles([101,102,106]);
+             firstTile = 103;
              break;
         case 4:
              arr = cardWord.sort(func);
@@ -387,11 +585,8 @@ body {
              setTextOnTile(3,arr[1]);
              setTextOnTile(4,arr[2]);
              setTextOnTile(5,arr[3]);
-             maketileDragabble(2);
-             maketileDragabble(3);
-             maketileDragabble(4);
-             maketileDragabble(5);
-             firstTile = 2;
+             hideTiles([101,106]);
+             firstTile = 102;
              break;
         case 5:
              arr = cardWord.sort(func);
@@ -400,12 +595,8 @@ body {
              setTextOnTile(4,arr[2]);
              setTextOnTile(5,arr[3]);
              setTextOnTile(6,arr[4]);
-             maketileDragabble(2);
-             maketileDragabble(3);
-             maketileDragabble(4);
-             maketileDragabble(5);
-             maketileDragabble(6);
-             firstTile = 2;
+             hideTiles([101]);
+             firstTile = 102;
              break;
         case 6:
              arr = cardWord.sort(func);
@@ -415,13 +606,7 @@ body {
              setTextOnTile(4,arr[3]);
              setTextOnTile(5,arr[4]);
              setTextOnTile(6,arr[5]);
-             maketileDragabble(1);
-             maketileDragabble(2);
-             maketileDragabble(3);
-             maketileDragabble(4);
-             maketileDragabble(5);
-             maketileDragabble(6);
-             firstTile = 1;
+             firstTile = 101;
              break;
         default:
              console.log("Minimum is 2 and Max Allowed length is 6");
@@ -437,7 +622,7 @@ body {
   }
 
   function welldone() {
-    document.getElementById("target").style.backgroundColor = "green";
+    document.getElementById("1").style.backgroundColor = "green";
     setTimeout(function(){
               window.location.reload(); 
               }, 1000);
@@ -447,6 +632,17 @@ body {
     document.getElementById("badge").innerHTML = correctWords;
   }
 
+  function correct(className) {
+     if (JSON.stringify(answer) === JSON.stringify(currenttiles)) {
+        if (className === '2') {
+             return true;
+        } else {
+             return false;
+        }
+     } else {
+         return false;
+     }
+  }
   async function init()
   {
       let response = await fetch('jumblewords.json');
@@ -462,92 +658,6 @@ body {
   init();
 
 </script>
-</head>
-<body translate="no">
-
-  <div class="item1 responsive">
-    <img src="https://j-raghavan.github.io/sb-flash-card/san.png" class="responsive" width="70%" align="center" alt="Jumble Fun"></img>
-  </div>
-
-  <div class="item2">
-    <p> <b>Guess the Jumbled word! </b></p>
-    <p> <b>Drag-and-drop the letters to the box below to construct the word. </b></p>
-    <p><span class="w3-badge w3-large w3-green" id="badge">0</span></p>
-
-  <div class="tray" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
-    <div id="1" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-      <img id="1_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
-    </div>
-    <div id="2" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-      <img id="2_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
-    </div>
-    <div id="3" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-      <img id="3_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
-    </div>
-    <div id="4" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-      <img id="4_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
-    </div>
-    <div id="5" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-      <img id="5_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
-    </div>
-    <div id="6" class="piece" draggable="true" ondragstart="dragstartHandler(event)">
-      <img id="6_img" src="https://j-raghavan.github.io/sb-flash-card/197.jpeg" class="responsive" width="5%"></img>
-    </div>
- </div>
- <br>
- <div class="dropZone" id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"> </div>
-<div align="center" class="responsive">
-  <img id="pic" src="" class="responsive" width="35%" height="35%" align="center" alt="picture"></img>
-</div>
-<p id="hint"> <b>HINT</b></p>
-<!--
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-                  ↪157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
--->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
- <script id="rendered-js">
-  function dragstartHandler(ev) {
-    ev.dataTransfer.setData("text/plain", ev.target.id);
-    ev.dataTransfer.dropEffect = "move";
-  }
-  function dragoverHandler(ev) {
-    ev.preventDefault();
-    ev.dataTransfer.dropEffect = "move";
-  }
-  function dropHandler(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text/plain");
-    if (ev.target.className === 'piece') {
-        ev.target.insertAdjacentElement('afterend', document.getElementById(data));
-    } else {
-        ev.target.appendChild(document.getElementById(data));
-    }
-
-    if (currenttiles.includes(Number(data))) {
-        currenttiles.length = 0;
-    }
-
-    currenttiles.push(Number(data));
-
-    if (correct(ev.target.className) === true)
-    {
-       welldone();
-    }
-  }
-
-  function correct(className) {
-    if (JSON.stringify(answer) === JSON.stringify(currenttiles)) {
-       if (className === 'dropZone') {
-           return true;
-       } else {
-           return false;
-       }
-    } else {
-       return false;
-    }
-  }
-</script>
- </div>
- <div class="item3"> </div>
-</div>
 </body>
 </html>
+
